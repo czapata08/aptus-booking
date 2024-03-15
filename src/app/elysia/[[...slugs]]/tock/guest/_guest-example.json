@@ -1,0 +1,95 @@
+{
+  "phone": [],
+  "day": [
+    {
+      "type": "BIRTHDAY",
+      "day": 24,
+      "month": 11,
+      "year": 1980
+    }
+  ],
+  "tag": ["Wine Club Members"],
+  "link": [
+    {
+      "type": "IMAGE",
+      "link": "https://www.gravatar.com/avatar/XXX?s=200&r=pg&d=mm"
+    }
+  ],
+  "businessGuestProfile": [
+    {
+      "tag": ["Wine Club Members"],
+      "business": {
+        "id": 100,
+        "businessGroupId": 200,
+        "name": "Robino Vino Veritas"
+      }
+    }
+  ],
+  "attribute": [
+    {
+      "businessId": 100,
+      "patronId": 12345,
+      "type": "INTEGRATION_TYPE",
+      "attribute": "AccountNumber",
+      "stringValue": "EXT-00001"
+    },
+    {
+      "businessId": 1322,
+      "patronId": 12345,
+      "type": "INTEGRATION_TYPE",
+      "attribute": "MembershipName",
+      "stringValue": "12 Bottle Wine Club Member"
+    }
+  ],
+  "id": 12178267,
+  "patron": {
+    "id": 12345,
+    "email": "r@tockhq.com",
+    "firstName": "Robin",
+    "lastName": "Anil",
+    "phone": "312-459-2602",
+    "zipCode": "60642",
+    "status": "ACTIVE",
+    "isoCountryCode": "US",
+    "phoneCountryCode": "+1 US"
+  },
+  "company": "Tock",
+  "address": {
+    "address_1": "406 N Sangamon",
+    "address_2": "",
+    "city": "Chicago",
+    "state": "IL",
+    "country": "",
+    "zipCode": "60642"
+  },
+  "businessGroupId": 926,
+  "importedProfile": {
+    "link": [],
+
+    "id": 2997057,
+    "firstName": "Robin",
+    "lastName": "Anil",
+    "company": "Tock",
+    "jobTitle": "Director of Engineering",
+    "address": {
+      "city": "Chicago",
+      "state": "Illinois",
+      "country": "United States"
+    }
+  },
+  "canEdit": false,
+  "updatedBy": {
+    "id": 12345,
+    "email": "r@tockhq.com",
+    "firstName": "Robin",
+    "lastName": "Anil",
+    "phone": "312-459-2602",
+    "zipCode": "60642",
+    "status": "ACTIVE",
+    "isoCountryCode": "US",
+    "phoneCountryCode": "+1 US"
+  },
+  "isArchived": false,
+  "optInSource": "IMPORTED",
+  "versionId": 1556639480793
+}

@@ -12,11 +12,11 @@ const config = {
     // this is a loader for public images
     loaderFile: "./supabase-image-loader.ts",
   },
-  // logging: {
-  //   fetches: {
-  //     fullUrl: true,
-  //   },
-  // },
+  logging: {
+    fetches: {
+      fullUrl: true,
+    },
+  },
 }
 
 export default config

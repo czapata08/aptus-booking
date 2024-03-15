@@ -1,29 +1,43 @@
-# Create T3 App
+# Tech Stack
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+- Environment: [NodeJs] [BunJs]
+- Script: [Typescript]
+- Database: [PostgreSQL]
+- Framework: [Nextjs] [React]
+- Architecture: [RSC]
+- Custom Server: [Elysia]
+- Runtime: [Edge] [Serverless]
+- API & DAL: [SupabaseJS]
 
-## What's next? How do I make an app with this?
+## Services & APIS
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+- Email: [Resend]
+- API layer: [SupabaseAPI]
+- Auth: [SupabaseAuth]
+  Auth provider: [GoogleOAUTH], [EmailOTP], [Credentials]
+- E2E Testing: [PlaywrightTesting]
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+## Typeset from supabase database - cli commands to generate types
+
+supabase gen types typescript --schema event_booking --project-id ztyzupbkbbyqyhjkuauu> db.booking.types.ts
+types % supabase gen types typescript --project-id ztyzupbkbbyqyhjkuauu> database.types.ts
+
+## Testing Library - e2e tests with playwright
+
+- [CLI]:
+  - npx playwright test
+  - npx playwright show-report
+  - npx playwright test --ui
+
+## Scafolded with T3 Stack
 
 - [Repo](https://github.com/dijonmusters/subscription-starter-demo)
-
-## Learn More
 
 To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
 
 - [Documentation](https://create.t3.gg/)
 - [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app)
 
-## How do I deploy this?
-
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
-
-<!-- Supabase Database Gen Typescript Type Def -->
-
-supabase gen types typescript --schema event_booking --project-id ztyzupbkbbyqyhjkuauu> db.booking.types.ts
-types % supabase gen types typescript --project-id ztyzupbkbbyqyhjkuauu> database.types.ts
+Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), and [Docker](https://create.t3.gg/en/deployment/docker) for more information.

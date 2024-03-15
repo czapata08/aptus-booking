@@ -53,10 +53,12 @@
     "@tabler/icons-react": "^2.47.0",
     "@tanstack/react-table": "^8.12.0",
     "@vercel/analytics": "^1.2.2",
+    "bun-types": "^1.0.31",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "cmdk": "^0.2.1",
     "date-fns": "^3.3.1",
+    "elysia": "^0.8.17",
     "embla-carousel-react": "^8.0.0-rc22",
     "framer-motion": "^11.0.8",
     "geist": "^1.2.2",
@@ -78,6 +80,7 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
+    "@playwright/test": "^1.42.1",
     "@types/eslint": "^8.44.7",
     "@types/node": "^18.17.0",
     "@types/react": "^18.2.37",
