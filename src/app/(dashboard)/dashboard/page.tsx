@@ -19,7 +19,7 @@ export default async function DashboardPage({
   params: { slug: string }
   searchParams: Record<string, string | string[] | undefined>
 }) {
-  console.log("searchParams from dash page", searchParams)
+  // console.log("searchParams from dash page", searchParams)
   // console.log("params from dash page", params)
 
   const events = await selectAEventsWithImages()

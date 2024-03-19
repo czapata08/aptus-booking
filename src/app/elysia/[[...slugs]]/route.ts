@@ -9,4 +9,8 @@ const app = new Elysia({ prefix: '/elysia' });
 guestController(app)
 reservationController(app)
 
+//Compile the elysia application before incoming requests
+app.compile()
+
+
 export const POST = app.handle

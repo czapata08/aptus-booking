@@ -1,11 +1,24 @@
 ## Elysia Server For Tock Webhook Integration
 
+## Elysia Rate Limit - elysia-rate-limit
+
+repo: [https://github.com/rayriffy/elysia-rate-limit]
+[Config]:
+example: [https://github.com/rayriffy/elysia-rate-limit/blob/main/src/%40types/Options.ts]
+
+- duration: duration of request to be remembered in milisec.
+- max: max requests allowed per 1 duration timeframe.
+- responseCode: number - default 429.
+- responseMessage: any - default rate-limit reached.
+- generator - custom key generator to categorize client requests.
+- countFailedRequests
+- context
+- skip
+
 ## Webhook POST Routes
 
-                    DEV | PROD |
-
-- [reservations] [] []
-- [guests] [] []
+- [reservations] [dev!] [prod!]
+- [guests] [dev!] [prod!]
 
 ## Testing CURL Command For Routes
 
@@ -21,7 +34,7 @@ curl -X POST http://localhost:3000/elysia/tock/guests \
 "businessGuestProfile": [{"tag": ["VIP"], "business": {"id": 1, "businessGroupId": 1, "name": "Tock"}}],
 "attribute": [{"businessId": 1, "patronId": 1, "type": "preference", "attribute": "food", "stringValue": "vegan"}],
 "id": 1,
-"patron": {"id": 1, "email": "example@example.com", "firstName": "John", "lastName": "Doe", "phone": "123-456-7890", "zipCode": "12345", "status": "active", "isoCountryCode": "US", "phoneCountryCode": "1"},
+"patron": {"id": 1, "email": "knight@aptus.com", "firstName": "Knight", "lastName": "Doe", "phone": "123-456-7890", "zipCode": "12345", "status": "active", "isoCountryCode": "US", "phoneCountryCode": "1"},
 "company": "Tock",
 "address": {"address_1": "123 Tock St", "address_2": "", "city": "Tocktown", "state": "TK", "country": "Tockland", "zipCode": "12345"},
 "businessGroupId": 1,

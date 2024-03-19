@@ -139,10 +139,10 @@ export function HandlePartySize({ useCase }: { useCase: "plus" | "minus" }) {
 
   React.useEffect(() => {
     const currentSearchParams = new URLSearchParams(searchParams.toString())
-    console.log(
-      "current searchParams fromm party size component: ",
-      currentSearchParams
-    )
+    // console.log(
+    //   "current searchParams fromm party size component: ",
+    //   currentSearchParams
+    // )
     if (!currentSearchParams.get("partySize")) {
       currentSearchParams.set("partySize", "1")
       currentSearchParams.set("maxParty", "4")

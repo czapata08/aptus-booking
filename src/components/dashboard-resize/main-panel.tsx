@@ -12,7 +12,6 @@ interface MainPanelLayoutProps {
   title: string
   titleIcon?: LucideIcon
   wSearch?: boolean
-
   children: React.ReactNode
   topAreaContent?: React.ReactNode
 }

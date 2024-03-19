@@ -12,7 +12,7 @@ import {
 import { cn } from "@/lib/utils"
 import { BentoGrid, BentoGridItem } from "@/components/bento-grid"
 
-export function BentoGridDemo() {
+export function BentoGridSimple() {
   return (
     <BentoGrid className="max-w-4xl mx-auto">
       {items.map((item, i) => (

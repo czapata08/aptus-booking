@@ -23,7 +23,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
-import LoadingDots from "@/components/file-uploader/loading-dots"
+import { LoadingDots } from "@/components/file-uploader/loading-dots"
 import { HandlePartySize } from "@/app/(dashboard)/_forms/f-wizard"
 import { type EC } from "@/app/server/event_booking/schemas/e-components-types"
 
@@ -81,7 +81,7 @@ export function EventForm({
         <h2 className="text-base ">Time Slots</h2>
       </div>
       <div className="grid grid-flow-col gap-1">
-        <React.Suspense fallback={<LoadingDots className="" />}>
+        <React.Suspense fallback={<LoadingDots />}>
           <SlotsWrapper eventId={event.id} />
         </React.Suspense>
       </div>

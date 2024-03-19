@@ -4,6 +4,7 @@
  * @see https://v0.dev/t/IYeP7dXFj2r
  * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
  */
+import Image from "next/image"
 import Link from "next/link"
 
 import { Button } from "@/components/ui/button"
@@ -96,7 +97,7 @@ export default function Component() {
                 size="icon"
                 variant="ghost"
               >
-                <img
+                <Image
                   alt="Avatar"
                   className="rounded-full"
                   height="32"
@@ -133,7 +134,7 @@ export default function Component() {
               </CardHeader>
               <CardContent className="grid gap-2 text-sm">
                 <div className="flex items-center gap-4">
-                  <img
+                  <Image
                     alt="Avatar"
                     className="rounded-full"
                     height="80"
@@ -221,7 +222,7 @@ export default function Component() {
             </CardHeader>
             <CardContent className="grid gap-4 md:grid-cols-2">
               <Card>
-                <img
+                <Image
                   alt="Product image"
                   className="aspect-square rounded-md object-cover"
                   height="200"
@@ -241,7 +242,7 @@ export default function Component() {
                 </CardContent>
               </Card>
               <Card>
-                <img
+                <Image
                   alt="Product image"
                   className="aspect-square rounded-md object-cover"
                   height="200"
@@ -261,7 +262,7 @@ export default function Component() {
                 </CardContent>
               </Card>
               <Card>
-                <img
+                <Image
                   alt="Product image"
                   className="aspect-square rounded-md object-cover"
                   height="200"
@@ -281,7 +282,7 @@ export default function Component() {
                 </CardContent>
               </Card>
               <Card>
-                <img
+                <Image
                   alt="Product image"
                   className="aspect-square rounded-md object-cover"
                   height="200"

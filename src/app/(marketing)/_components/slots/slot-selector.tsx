@@ -14,7 +14,7 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import { DrawerOrDialog } from "@/components/drawer-or-dialog"
-import LoadingDots from "@/components/file-uploader/loading-dots"
+import { LoadingDots } from "@/components/file-uploader/loading-dots"
 import { CheckoutWizardDemo } from "@/app/(marketing)/_components/checkout/checkout"
 import {
   type EC,
@@ -237,7 +237,7 @@ export function EventDetailed({
                 <SelectItem value="5">5 Guests</SelectItem>
               </SelectContent>
 
-              <React.Suspense fallback={<LoadingDots className="" />}>
+              <React.Suspense fallback={<LoadingDots />}>
                 <SlotsSelector slots={slots} onDateChange={setSelectedDate} />
               </React.Suspense>
             </Select>

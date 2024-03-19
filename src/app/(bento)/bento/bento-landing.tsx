@@ -16,14 +16,17 @@ import { BentoGrid, BentoGridItem } from "@/components/bento-grid"
 
 export function BentoGridLandingDemo() {
   return (
-    <BentoGrid className=" mx-auto md:auto-rows-[20rem]">
+    <BentoGrid className="mx-auto md:auto-rows-[20rem]">
       {items.map((item, i) => (
         <BentoGridItem
           key={i}
           title={item.title}
           description={item.description}
           header={item.header}
-          className={cn("[&>p:text-lg]", item.className)}
+          className={cn(
+            "[&>p:text-lg] bg-gradient-to-t from-transparent to-transparent/20",
+            item.className
+          )}
           icon={item.icon}
         />
       ))}

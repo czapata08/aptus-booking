@@ -13,7 +13,7 @@ import { insertImage } from "@/app/server/images/img-uploader"
 
 //ui
 import { Input } from "../ui/input"
-import LoadingDots from "./loading-dots"
+import { LoadingDots } from "./loading-dots"
 
 export default function UploaderForm({
   rowId,
@@ -241,11 +241,7 @@ export default function UploaderForm({
             : "border-black bg-black text-white hover:bg-white hover:text-black"
         } flex h-10 w-full items-center justify-center rounded-md border text-sm transition-all focus:outline-none`}
       >
-        {saving ? (
-          <LoadingDots className="mb-3 bg-white" />
-        ) : (
-          <p className="text-sm">Confirm upload</p>
-        )}
+        {saving ? <LoadingDots /> : <p className="text-sm">Confirm upload</p>}
       </button>
     </form>
   )

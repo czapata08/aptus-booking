@@ -219,12 +219,14 @@ export async function selectEventWImages(id: string) {
 export async function queryEventAndImagesByRef(id: string) {
   const supabase = createServerClient()
 
+  console.log("id", id)
+
   const { data, error } = await supabase
     .from("events")
     .select(
       `id, title, price, description, location, start_date, end_date, event_images(image_id, caption, metadata, image_url, event_id)`
     )
-    .eq("id", id)
+    .eq("id", id.toString())
     .single()
 
   if (error) {

@@ -3,7 +3,8 @@ import { CalendarDaysIcon } from "lucide-react"
 import { MainPanelLayout } from "@/components/dashboard-resize/main-panel"
 
 import { BentoGridLandingDemo } from "./bento-landing"
-import { BentoGridDemo } from "./bento-simple"
+import { BentoGridSimple } from "./bento-simple"
+import { TockButton } from "./tock-widget"
 
 export default function Page({
   params,
@@ -13,12 +14,15 @@ export default function Page({
   searchParams: Record<string, string | string[] | undefined>
 }) {
   if (searchParams.bento === "a") {
-    return <BentoGridDemo />
+    return <BentoGridSimple />
   }
 
   return (
-    <MainPanelLayout title="Events Book" titleIcon={CalendarDaysIcon}>
-      <BentoGridLandingDemo />
-    </MainPanelLayout>
+    <div className="relative h-full bg-gradient-to-t ">
+      <MainPanelLayout title="Dashboard">
+        <TockButton />
+        <BentoGridSimple />
+      </MainPanelLayout>
+    </div>
   )
 }

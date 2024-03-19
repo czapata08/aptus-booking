@@ -11,12 +11,12 @@ export default function AuthRootLayout({
   children: React.ReactNode
 }) {
   return (
-    <Suspense>
+    <>
       <Toaster position="top-right" richColors className="p-2" />
       <Suspense fallback={null}>
         <NavigationEvents />
       </Suspense>
       <Suspense>{children}</Suspense>
-    </Suspense>
+    </>
   )
 }

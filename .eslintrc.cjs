@@ -50,6 +50,16 @@ const config = {
         "@typescript-eslint/prefer-nullish-coalescing": "off",
       },
     },
+    {
+      files: ["src/components/registry/globe/**/*.{ts, tsx}"],
+      rules: {
+        // You can specify individual rules to disable here, or use the following to disable all rules:
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unsafe-return": "off",
+        "@typescript-eslint/no-unsafe-call": "off",
+        "@typescript-eslint/no-unsafe-member-access": "off",
+      },
+    },
   ],
 }
 
