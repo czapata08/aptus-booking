@@ -16,8 +16,6 @@
     "ui:add": "bunx --bun shadcn-ui@latest add"
   },
   "dependencies": {
-    "@elysiajs/bearer": "^1.0.0",
-    "@elysiajs/jwt": "^1.0.0",
     "@hookform/resolvers": "^3.3.4",
     "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
     "@radix-ui/react-accordion": "^1.1.2",

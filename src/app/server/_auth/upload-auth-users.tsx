@@ -7,17 +7,9 @@
 
 const { createClient } = require("@supabase/supabase-js")
 
-// const SUPABASE_URL = 'http://127.0.0.1:54321';
-// const SUPABASE_SERVICE_ROLE_KEY =
-// 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU';
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL ?? " "
 
-const NEXT_PUBLIC_SUPABASE_URL = "https://ztyzupbkbbyqyhjkuauu.supabase.co"
-const supabaseUrl =
-  process.env.NEXT_PUBLIC_SUPABASE_URL ?? NEXT_PUBLIC_SUPABASE_URL
-const SUPABASE_SERVICE_ROLE_KEY =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp0eXp1cGJrYmJ5cXloamt1YXV1Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTcwMzE4MDc0MywiZXhwIjoyMDE4NzU2NzQzfQ.-xhPmm98IV8zf0NERRcC5meQhmoBOhvX9pYVVJBOvMg"
-const supabaseServiceRoleKey =
-  process.env.SUPABASE_SERVICE_ROLE_KEY ?? SUPABASE_SERVICE_ROLE_KEY
+const supabaseServiceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY ?? " "
 
 interface IdOrError {
   id?: string
