@@ -42,6 +42,6 @@ export async function handleGuestProfile(guestProfile: GuestProfile) {
   }
 
   return {
-    insert,
+    insert
   }
 }

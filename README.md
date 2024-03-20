@@ -1,21 +1,23 @@
 # Tech Stack
 
-- Environment: [NodeJs] [BunJs]
+- Run Time: [NodeJs] [BunJs]
+- Runtime Environment: [Edge] [Serverless]
 - Script: [Typescript]
 - Database: [PostgreSQL]
 - Framework: [Nextjs] [React]
 - Architecture: [RSC]
 - Custom Server: [Elysia]
-- Runtime: [Edge] [Serverless]
 - API & DAL: [SupabaseJS]
 
 ## Services & APIS
 
 - Email: [Resend]
 - API layer: [SupabaseAPI]
+- Storage: [SupabaseStorage]
 - Auth: [SupabaseAuth]
   Auth provider: [GoogleOAUTH], [EmailOTP], [Credentials]
 - E2E Testing: [PlaywrightTesting]
+- Custom server: [Elysia]: tock webhook
 
 ## Typeset from supabase database - cli commands to generate types
 

@@ -11,12 +11,10 @@ export function guestController(app: Elysia<string>) {
     })
     .post("/tock/guests", async ({ body }) => {
       const res = await handleGuestProfile(body)
-
-      // console.log('Res from function handleGuestProfile on tock route: ', res);
-
       return res
     })
     .onError(({ code }) => {
+      console.log('Error on guest route', code)
       if (code === "NOT_FOUND") {
         console.log("code", code)
         return "<--- Route not found for guest route :( --->"

@@ -60,8 +60,7 @@ export async function middleware(request: NextRequest) {
   const { data: { user } } = await supabase.auth.getUser();
   const session = await supabase.auth.getSession()
 
-    // Paths to allow without authentication
-  const publicPaths = ['/', '/events'];
+  // Paths to allow without authentication
   if (publicPaths.includes(pathname)) {
     return NextResponse.next();
   }
@@ -78,7 +77,7 @@ return response
 
 export const config = {
   matcher: [
-    '/((?!api|_next/static|_next/image|favicon.ico).*)',
+    '/((?!api|elysia|_next/static|_next/image|favicon.ico).*)',
   ],
 }
 

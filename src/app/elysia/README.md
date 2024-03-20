@@ -1,5 +1,18 @@
 ## Elysia Server For Tock Webhook Integration
 
+## Generate token route
+
+curl -X POST http://localhost:3000/elysia/generate-token \
+-H "Content-Type: application/json" \
+-d '{"user_id": "esme_chicago", "service_id": "tock_esme"}'
+
+## Status
+
+- [Expose Tock Routes] [x]
+- [Data Validation] [x]
+- [Insert into database] [x]
+- [JWT Validation] []
+
 ## Elysia Rate Limit - elysia-rate-limit
 
 repo: [https://github.com/rayriffy/elysia-rate-limit]
@@ -15,25 +28,30 @@ example: [https://github.com/rayriffy/elysia-rate-limit/blob/main/src/%40types/O
 - context
 - skip
 
-## Webhook POST Routes
+## Routes
 
 - [reservations] [dev!] [prod!]
 - [guests] [dev!] [prod!]
 
 ## Testing CURL Command For Routes
 
+<!-- With JWT Header -->
+
+-H "Authorization: Bearer " \
+
 <!-- Guests -->
 
 curl -X POST http://localhost:3000/elysia/tock/guests \
 -H "Content-Type: application/json" \
+-H "Authorization: Bearer " \
 -d '{
 "phone": ["123-456-7890"],
-"day": [{"type": "birthday", "day": 1, "month": 1, "year": 1990}],
+"day": [{"type": "birthday", "day": 8, "month": 1, "year": 1990}],
 "tag": ["VIP"],
 "link": [{"type": "social", "link": "http://example.com"}],
 "businessGuestProfile": [{"tag": ["VIP"], "business": {"id": 1, "businessGroupId": 1, "name": "Tock"}}],
-"attribute": [{"businessId": 1, "patronId": 1, "type": "preference", "attribute": "food", "stringValue": "vegan"}],
-"id": 1,
+"attribute": [{"businessId": 1, "patronId": 1, "type": "preference", "attribute": "food", "stringValue": "carnivorous"}],
+"id": 10,
 "patron": {"id": 1, "email": "knight@aptus.com", "firstName": "Knight", "lastName": "Doe", "phone": "123-456-7890", "zipCode": "12345", "status": "active", "isoCountryCode": "US", "phoneCountryCode": "1"},
 "company": "Tock",
 "address": {"address_1": "123 Tock St", "address_2": "", "city": "Tocktown", "state": "TK", "country": "Tockland", "zipCode": "12345"},
@@ -51,9 +69,10 @@ curl -X POST http://localhost:3000/elysia/tock/guests \
 
 curl -X POST http://localhost:3000/elysia/tock/reservations \
 -H "Content-Type: application/json" \
+-H "Authorization: Bearer " \
 -d @- <<'EOF'
 {
-"id": 413,
+"id": 420,
 "business": {
 "id": 707,
 "name": "Robin's Ravioli",
