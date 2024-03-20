@@ -1,5 +1,7 @@
 ## Elysia Server For Tock Webhook Integration
 
+<Production Url>: [https://aptus-booking.vercel.app/]
+
 ## Generate token route
 
 curl -X POST http://localhost:3000/elysia/generate-token \
@@ -8,10 +10,11 @@ curl -X POST http://localhost:3000/elysia/generate-token \
 
 ## Status
 
-- [Expose Tock Routes] [x]
-- [Data Validation] [x]
+- [Expose tock routes] [x]
+- [Data validation] [x]
 - [Insert into database] [x]
-- [JWT Validation] []
+- [JWT Validation] [x]
+- [Test Routes on production] [x]
 
 ## Elysia Rate Limit - elysia-rate-limit
 
@@ -41,9 +44,9 @@ example: [https://github.com/rayriffy/elysia-rate-limit/blob/main/src/%40types/O
 
 <!-- Guests -->
 
-curl -X POST http://localhost:3000/elysia/tock/guests \
+curl -X POST https://aptus-booking.vercel.app/elysia/tock/guests \
 -H "Content-Type: application/json" \
--H "Authorization: Bearer " \
+-H "Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZXNtZV9jaGljYWdvIiwic2VydmljZV9pZCI6InRvY2tfZXNtZSJ9.IPg73P\_\_YPRPawovFSm_WoflWc7wjmsg855NSuC7HUE" \
 -d '{
 "phone": ["123-456-7890"],
 "day": [{"type": "birthday", "day": 8, "month": 1, "year": 1990}],
@@ -51,7 +54,7 @@ curl -X POST http://localhost:3000/elysia/tock/guests \
 "link": [{"type": "social", "link": "http://example.com"}],
 "businessGuestProfile": [{"tag": ["VIP"], "business": {"id": 1, "businessGroupId": 1, "name": "Tock"}}],
 "attribute": [{"businessId": 1, "patronId": 1, "type": "preference", "attribute": "food", "stringValue": "carnivorous"}],
-"id": 10,
+"id": 420,
 "patron": {"id": 1, "email": "knight@aptus.com", "firstName": "Knight", "lastName": "Doe", "phone": "123-456-7890", "zipCode": "12345", "status": "active", "isoCountryCode": "US", "phoneCountryCode": "1"},
 "company": "Tock",
 "address": {"address_1": "123 Tock St", "address_2": "", "city": "Tocktown", "state": "TK", "country": "Tockland", "zipCode": "12345"},
@@ -67,9 +70,9 @@ curl -X POST http://localhost:3000/elysia/tock/guests \
 <!-- Reservations -->
 <!-- Using EOF to scape error for json structure because of special charactes like "Robin's" apos -->
 
-curl -X POST http://localhost:3000/elysia/tock/reservations \
+curl -X POST https://aptus-booking.vercel.app/elysia/tock/reservations \
 -H "Content-Type: application/json" \
--H "Authorization: Bearer " \
+-H "Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZXNtZV9jaGljYWdvIiwic2VydmljZV9pZCI6InRvY2tfZXNtZSJ9.IPg73P\_\_YPRPawovFSm_WoflWc7wjmsg855NSuC7HUE" \
 -d @- <<'EOF'
 {
 "id": 420,

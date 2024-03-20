@@ -3,7 +3,7 @@ import { redirect } from "next/navigation"
 import { createClient } from "@/utils/supabase/server"
 import { toast } from "sonner"
 
-import { ConfirmResetPasswordForm } from "../_forms/auth-forms.tsx"
+import { ConfirmResetPasswordForm } from "../_forms/auth-forms"
 
 //[to_do]: need to restrict access to this route - implementation could be with the type parameter which is passed to the callback
 // function when the request pswd link is verified

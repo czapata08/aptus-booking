@@ -1,9 +1,12 @@
-"use client"
-
 import { Suspense } from "react"
+import { type Metadata } from "next"
 
-import { Toaster } from "@/components/ui/sonner"
-import { NavigationEvents } from "@/app/(auth)/navigation-events"
+import { NavigationEvents } from "@/app/(auth)/navigation-listener"
+
+export const metadata: Metadata = {
+  title: "Login",
+  description: "User sign-in",
+}
 
 export default function AuthRootLayout({
   children,
@@ -12,7 +15,6 @@ export default function AuthRootLayout({
 }) {
   return (
     <>
-      <Toaster position="top-right" richColors className="p-2" />
       <Suspense fallback={null}>
         <NavigationEvents />
       </Suspense>

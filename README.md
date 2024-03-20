@@ -1,3 +1,39 @@
+<!-- prettier-ignore -->
+# Status
+
+- Production Domain Deployment [x]
+- Webhook tock integration [x]
+- Webhook data validation [x]
+- Webhook jwt authorization strategy [x]
+- Payments with stripe [x]
+- Stripe embedded form [x]
+- Stripe api keys - tested [x]
+- CMS operational features
+  -create: events management dashboard [x]
+  -update: events management dashboard [x]
+  -delete: events management dashboard [x]
+  -read: public landing page, read from stripe
+- Database: RBAC, RLS, Auth [x]
+- API: DAL - functions [x]
+- Auth:
+  credentials [x]
+  google - links to supabase account [x]
+  otp [x]
+- Middleware: cookies, public/private routes [x]
+- Custom server with elysia [x]
+- Eslint [x]
+- Unit Test implementation [x]
+- User Account UI
+  Profile []
+  Notifications & Emails []
+  Account Information []
+
+# Production Url
+
+[status] === <Live>
+https://www.beaptus.com
+https://be-aptus.vercel.app
+
 # Tech Stack
 
 - Run Time: [NodeJs] [BunJs]
@@ -31,15 +67,9 @@ types % supabase gen types typescript --project-id ztyzupbkbbyqyhjkuauu> databas
   - npx playwright show-report
   - npx playwright test --ui
 
-## Scafolded with T3 Stack
+## Api documentation
 
-- [Repo](https://github.com/dijonmusters/subscription-starter-demo)
-
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
-
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
-
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app)
+- [T3 Documentation](https://create.t3.gg/)
+- [Guide Repo Stripe Supabase Saas]: (https://github.com/dijonmusters/subscription-starter-demo)
 
 Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), and [Docker](https://create.t3.gg/en/deployment/docker) for more information.

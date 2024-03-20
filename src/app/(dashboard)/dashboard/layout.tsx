@@ -4,7 +4,7 @@ import { cookies } from "next/headers"
 
 import { Toaster } from "@/components/ui/sonner"
 import { ResizableDashLayout } from "@/components/dashboard-resize/layout-shell"
-import { NavigationEvents } from "@/app/(auth)/navigation-events"
+import { NavigationEvents } from "@/app/(auth)/navigation-listener"
 
 // Data can be fetched here
 import { accounts } from "../_config/accounts"

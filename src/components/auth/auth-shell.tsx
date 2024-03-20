@@ -1,38 +1,21 @@
-"use client"
-
-import { useState } from "react"
+// [Revised]: keep as shell for auth ui
 import Link from "next/link"
-import { toast } from "sonner"
 
 import { cn } from "@/lib/utils"
-import { Button, buttonVariants } from "@/components/ui/button"
-import { googleLogin } from "@/app/auth/server/auth/google"
+import { buttonVariants } from "@/components/ui/button"
 import { siteConfig } from "@/app/config/site"
 
 import { Icons } from "./icons"
 
 interface LoginShellProps {
   children: React.ReactNode
+  authProviders: React.ReactNode
 }
 
-export function LoginShell({ children }: LoginShellProps) {
-  const [isLoading, setLoading] = useState<boolean>(false)
-
-  async function handleSignInWithGoogle() {
-    const promise = googleLogin()
-
-    toast.promise(promise, {
-      loading: "Loading...",
-      success: "Redirecting...",
-      error: (error) => {
-        if (error && error instanceof Error) return error.message.toString()
-        else return "An error ocurred with your login. Please try again."
-      },
-    })
-  }
-
+export function LoginShell({ children, authProviders }: LoginShellProps) {
   return (
     <div className="container relative h-[100dvh] flex-col items-center justify-center md:grid lg:max-w-none lg:grid-cols-2 lg:px-0">
+      {/* This could be extended as prop */}
       <Link
         href={siteConfig.links.esme_elite_landing}
         className={cn(
@@ -51,7 +34,8 @@ export function LoginShell({ children }: LoginShellProps) {
           }}
         />
         <div className="relative z-20 flex items-center text-lg font-medium">
-          <Icons.logo className="h-10 w-8 mr-2" />
+          <Icons.aptusDark className="h-8 w-8 mr-2 dark:hidden" />
+          <Icons.aptusLight className="h-8 w-8 mr-2" />
           <span className="dark:text-foreground scroll-m-20 font-sans text-3xl font-bold tracking-tighter first:mt-0">
             {siteConfig.name}
           </span>
@@ -80,26 +64,13 @@ export function LoginShell({ children }: LoginShellProps) {
             <div className="absolute inset-0 flex items-center">
               <span className="w-full border-t" />
             </div>
-            <div className="relative flex justify-center text-xs uppercase">
+            <div className="relative flex justify-center text-xs lowercase">
               <span className="bg-background px-2 text-muted-foreground">
                 Or continue with
               </span>
             </div>
           </div>
-
-          <Button
-            variant="outline"
-            type="submit"
-            disabled={isLoading}
-            onClick={handleSignInWithGoogle}
-          >
-            {isLoading ? (
-              <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
-            ) : (
-              <Icons.google className="mr-2 h-4 w-4" />
-            )}{" "}
-            Google
-          </Button>
+          {authProviders}
           <p className="px-8 text-center text-sm text-muted-foreground">
             By clicking continue, you agree to our{" "}
             <Link

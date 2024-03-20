@@ -1,8 +1,10 @@
 import { toast } from "sonner"
 
-import { Icons } from "./icons"
-import { UserAuthForm } from "./l-comp"
-import { LoginShell } from "./l-shell"
+import { AuthFormsShell } from "@/components/auth/auth-forms-shell"
+import { LoginShell } from "@/components/auth/auth-shell"
+
+import { LoginOtpForm } from "../_forms/auth-forms"
+import { GoogleLoginButton } from "../_forms/google-login-button"
 
 export default function LoginPage({
   searchParams,
@@ -14,8 +16,10 @@ export default function LoginPage({
   }
 
   return (
-    <LoginShell>
-      <UserAuthForm />
+    <LoginShell authProviders={<GoogleLoginButton />}>
+      <AuthFormsShell>
+        <LoginOtpForm />
+      </AuthFormsShell>
     </LoginShell>
   )
 }
